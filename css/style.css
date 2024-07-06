@@ -361,6 +361,10 @@ input[type=text]::placeholder {
   color: #000;
   margin-bottom: 64px;
 }
+.collection__img {
+  text-align: center;
+  margin: 0 auto;
+}
 .collection__img-first {
   display: none;
 }
@@ -374,6 +378,86 @@ input[type=text]::placeholder {
 .collection__img-sec img {
   display: block;
   width: 100%;
+}
+.collection__btn {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 124%;
+  text-align: center;
+  color: #fff;
+  background: #9b8c7c;
+  padding: 11px 22px;
+  margin-top: 34px;
+}
+
+.complete {
+  padding: 0 10px 64px;
+}
+.complete__box {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.complete__title {
+  font-weight: 400;
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 34px;
+}
+.complete__text {
+  font-family: "Hind Vadodara", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 34px;
+}
+.complete__btn {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 124%;
+  color: #fff;
+  background: #9b8c7c;
+  padding: 10px 47px;
+  margin-bottom: 62px;
+}
+.complete__img {
+  display: flex;
+  flex-direction: row;
+}
+.complete__img-box {
+  max-width: 243px;
+  margin-right: 25px;
+}
+.complete__img-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.complete__img-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 131%;
+  color: #000;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+.complete__img-price {
+  font-family: "Hind Vadodara", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 131%;
+  color: #767575;
+}
+
+.slick-slide {
+  margin-right: 25px;
+}
+
+.slick-list {
+  padding-left: 2px;
+}
+
+.slick-track {
+  display: flex;
 }
 
 @media (min-width: 640px) {
@@ -496,5 +580,8 @@ input[type=text]::placeholder {
   .search__picture-img {
     width: 100%;
     height: auto;
+  }
+  .complete__content {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */

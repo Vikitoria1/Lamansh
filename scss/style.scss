@@ -155,7 +155,7 @@ body {
     pointer-events: none;
   }
 }
-input[type="text"]::placeholder { 
+input[type="text"]::placeholder {
   color: $color-light-gray;
   opacity: 1;
 }
@@ -353,6 +353,10 @@ input[type="text"]::placeholder {
     color: $color-black;
     margin-bottom: 64px;
   }
+  &__img {
+    text-align: center;
+    margin: 0 auto;
+  }
   &__img-first {
     display: none;
   }
@@ -367,6 +371,82 @@ input[type="text"]::placeholder {
       width: 100%;
     }
   }
+  &__btn {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 124%;
+    text-align: center;
+    color: $color-white;
+    background: $color-brown-gray;
+    padding: 11px 22px;
+    margin-top: 34px;
+  }
+}
+
+.complete {
+  padding: 0 10px 64px;
+  &__box {
+    text-align-last: left;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    color: $color-black;
+    margin-bottom: 34px;
+  }
+  &__text {
+    font-family: $sec-fam;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-black;
+    margin-bottom: 34px;
+  }
+  &__btn {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 124%;
+    color: $color-white;
+    background: $color-brown-gray;
+    padding: 10px 47px;
+    margin-bottom: 62px;
+  }
+  &__img {
+    display: flex;
+    flex-direction: row;
+    &-box {
+      max-width: 243px;
+      margin-right: 25px;
+    }
+    &-link img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &-name {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 131%;
+      color: $color-black;
+      margin-top: 7px;
+      margin-bottom: 7px;
+    }
+    &-price {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 131%;
+      color: $color-medium-gray;
+    }
+  }
+}
+.slick-slide {
+  margin-right: 25px;
+}
+.slick-list {
+  padding-left: 2px;
+}
+.slick-track {
+  display: flex;
 }
 
 @media (min-width: 640px) {
@@ -462,7 +542,6 @@ input[type="text"]::placeholder {
       gap: 50px;
     }
   }
-
   .search__content {
     justify-content: space-between;
   }
@@ -493,5 +572,8 @@ input[type="text"]::placeholder {
       width: 100%;
       height: auto;
     }
+  }
+  .complete__content {
+    display: flex;
   }
 }
