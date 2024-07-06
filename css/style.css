@@ -145,6 +145,7 @@ body {
   color: #000;
   background: transparent;
   border: none;
+  outline: none;
 }
 .search__box-img {
   position: absolute;
@@ -156,6 +157,16 @@ body {
   pointer-events: none;
 }
 
+input[type=text]::-moz-placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+}
+
+input[type=text]::placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+}
+
 .menu-open .nav {
   transform: translateY(0%);
 }
@@ -163,10 +174,13 @@ body {
 .top {
   background: url(../images/top-bg.jpg) center no-repeat;
   background-size: cover;
+  padding: 0 15px;
 }
 .top__inner {
-  min-width: 310px;
+  min-width: 300px;
   text-align: center;
+  margin: 0 auto;
+  padding-top: 200px;
 }
 .top__title {
   font-weight: 400;
@@ -417,10 +431,42 @@ body {
   .search__box-input {
     font-size: 15px;
   }
+  .top__inner {
+    max-width: 470px;
+    text-align: left;
+    margin: 0;
+    padding-top: 168px;
+  }
+  .top__title {
+    background: none;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 41px;
+    padding: 0;
+  }
+  .top__text {
+    display: block;
+    font-family: "Hind Vadodara", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 117%;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 33px;
+  }
+  .top__btn {
+    margin-bottom: 200px;
+  }
 }
 @media (min-width: 1024px) {
   .container {
     max-width: 1200px;
+  }
+  .nav {
+    gap: 65px;
+  }
+  .nav__list {
+    gap: 50px;
   }
   .search__content {
     justify-content: space-between;
