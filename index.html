@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -189,22 +190,25 @@
       </section>
       <section class="collection">
         <div class="container">
-          <h2 class="collection__title">New Collection 2023</h2>
-          <p class="collection__text">
-            "Discover Your Perfect Match: The Latest Trends in Wedding Dresses"
-          </p>
-          <div class="collection__img">
-            <div class="collection__img-first">
-              <img src="images/collection-1.jpg" alt="picture" />
+          <div class="collection__box">
+            <h2 class="collection__title">New Collection 2023</h2>
+            <p class="collection__text">
+              "Discover Your Perfect Match: The Latest Trends in Wedding
+              Dresses"
+            </p>
+            <div class="collection__img">
+              <div class="collection__img-first">
+                <img src="images/collection-1.jpg" alt="picture" />
+              </div>
+              <div class="collection__img-sec">
+                <img src="images/collection-2.jpg" alt="picture" />
+              </div>
+              <div class="collection__img-third">
+                <img src="images/collection-3.jpg" alt="picture" />
+              </div>
             </div>
-            <div class="collection__img-sec">
-              <img src="images/collection-2.jpg" alt="picture" />
-            </div>
-            <div class="collection__img-third">
-              <img src="images/collection-3.jpg" alt="picture" />
-            </div>
+            <button class="collection__btn" type="button">Open Catalog</button>
           </div>
-          <button class="collection__btn" type="button">Open Catalog</button>
         </div>
       </section>
       <section class="complete">
@@ -246,8 +250,102 @@
           </div>
         </div>
       </section>
+      <section class="contacts">
+        <div class="container">
+          <div class="contacts__content">
+            <form class="contacts__form" action="#">
+              <h2 class="contacts__title">
+                Sign up for a dress fitting and get a
+                <span class="contacts__title-span">10% discount</span>
+              </h2>
+              <input class="contacts__input" type="text" placeholder="Name" />
+              <input
+                class="contacts__input"
+                type="text"
+                placeholder="Phone Number"
+              />
+              <button class="contacts__btn" type="button">Send</button>
+            </form>
+            <img
+              class="contacts__img"
+              src="images/contacts.jpg"
+              alt="picture"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="follow">
+        <div class="container">
+          <h3 class="follow__title">Follow us in Instagram</h3>
+          <a class="follow__link" href="#">@lamanshStore #Lamansh</a>
+          <div class="follow__img">
+            <img src="images/follow-1.jpg" alt="picture" />
+            <img src="images/follow-2.jpg" alt="picture" />
+            <img src="images/follow-3.jpg" alt="picture" />
+            <img src="images/follow-4.jpg" alt="picture" />
+            <img src="images/follow-5.jpg" alt="picture" />
+          </div>
+        </div>
+      </section>
     </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__list">
+          <div class="footer__inner">
+            <a class="footer__inner-logo" href="index.html">
+              <img src="images/footer-logo.png" alt="picture" />
+            </a>
+            <p class="footer__inner-text">
+              Lamansh ©Copyright 2024. All rights reserved.
+            </p>
+            <a class="footer__inner-link" href="#">Privacy Policy</a>
+          </div>
+          <div class="footer__contacts">
+            <a class="footer__contacts-phone" href="tel:123456789"
+              >+123 456 789</a
+            >
+            <a
+              class="footer__contacts-email"
+              href="mailto:lamanshTeam@gmail.com"
+              >lamanshTeam@gmail.com</a
+            >
+            <ul class="footer__social">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">
+                  <img src="images/insta.svg" alt="picture" />
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">
+                  <img src="images/facebook.svg" alt="picture" />
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">
+                  <img src="images/twitter.svg" alt="picture" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__subscribe">
+            <p class="footer__subscribe-text">Stay up to date with our news</p>
+            <form class="footer__subscribe-form" action="#">
+              <input
+                class="footer__subscribe-input"
+                type="email"
+                name="footer-email"
+                id="footer-email"
+                placeholder="Enter your email"
+              />
+              <a class="footer__subscribe-link" href="#">
+                <img src="images/footer-arrow.svg" alt="icon" />
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>

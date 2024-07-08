@@ -8,30 +8,25 @@ btn.addEventListener("click", () => {
 $(document).ready(function () {
   $(".complete__img").slick({
     arrows: false,
-    infinity: true,
-    initialSlide: 1,
-    slidesToShow: 1.5,
-    slidesToScroll: 1,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     variableWidth: true,
     responsive: [
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: false,
-          centerMode: true,
-          variableWidth: true,
+          infinite: false
         },
       },
       {
-        breakpoint: 1024,
+        breakpoint: 340,
         settings: {
           slidesToShow: 1.2,
           slidesToScroll: 1,
-          infinite: false,
-          centerMode: false,
-          variableWidth: true,
+          infinite: false
         },
       },
     ],

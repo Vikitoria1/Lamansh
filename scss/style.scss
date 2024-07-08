@@ -335,6 +335,11 @@ input[type="text"]::placeholder {
 }
 .collection {
   padding: 64px 10px;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__title {
     font-weight: 400;
     font-size: 20px;
@@ -386,7 +391,7 @@ input[type="text"]::placeholder {
 .complete {
   padding: 0 10px 64px;
   &__box {
-    text-align-last: left;
+    text-align: left;
   }
   &__title {
     font-weight: 400;
@@ -411,15 +416,14 @@ input[type="text"]::placeholder {
     margin-bottom: 62px;
   }
   &__img {
-    display: flex;
-    flex-direction: row;
+    min-width: 0;
     &-box {
-      max-width: 243px;
+      width: 243px;
       margin-right: 25px;
     }
     &-link img {
       display: block;
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
     &-name {
@@ -439,14 +443,188 @@ input[type="text"]::placeholder {
     }
   }
 }
-.slick-slide {
-  margin-right: 25px;
-}
 .slick-list {
-  padding-left: 2px;
+  overflow: hidden;
 }
 .slick-track {
   display: flex;
+}
+
+.contacts {
+  padding: 0 16px;
+  &__form {
+    text-align: center;
+    padding: 0 22px 41px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: $color-black;
+    margin-bottom: 55px;
+    &-span {
+      color: $color-brown-gray;
+    }
+  }
+  &__input {
+    padding: 15px 0 8px;
+    border: none;
+    border-bottom: 1px solid $color-light-gray;
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  &__btn {
+    font-weight: 400;
+    font-size: 17px;
+    color: $color-white;
+    background: $color-brown-gray;
+    border: none;
+    cursor: pointer;
+    padding: 13px 110px;
+    margin-top: 31px;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+.follow {
+  padding: 64px 0;
+  text-align: center;
+  &__title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 105%;
+    text-transform: capitalize;
+    text-align: center;
+    color: $color-black;
+    margin-bottom: 11px;
+  }
+  &__link {
+    font-family: $sec-fam;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 131%;
+    text-transform: capitalize;
+    text-align: center;
+    color: $color-dark-gray-variant;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  padding: 39px 47px;
+  background: $background-light-gray;
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__inner {
+    text-align: left;
+    margin-bottom: 64px;
+    &-text {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 114%;
+      color: $color-black;
+      margin-top: 27px;
+      margin-bottom: 18px;
+    }
+    &-link {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: $color-black;
+      border-bottom: 1px solid #848484;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+    &-phone {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 105%;
+      color: $color-black;
+      margin-bottom: 22px;
+    }
+    &-email {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 140%;
+      color: $color-black;
+      margin-bottom: 20px;
+    }
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+    &-item {
+      width: 33px;
+      height: 33px;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background: $color-black;
+    }
+  }
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-text {
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 124%;
+      color: $color-black;
+      margin-bottom: 32px;
+    }
+    &-form {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 5px;
+    }
+    &-input {
+      width: 212px;
+      border: none;
+      border-bottom: 1px solid #a7a7a7;
+      background: transparent;
+      padding: 15px 0 3px;
+      font-family: $sec-fam;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 162%;
+    }
+    &-link img {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: 640px) {
@@ -470,6 +648,19 @@ input[type="text"]::placeholder {
     flex-direction: column;
     &-box {
       width: 358px;
+    }
+  }
+  .follow {
+    padding-bottom: 90px;
+    &__img {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      gap: 22px;
+      margin-top: 42px;
+      & img {
+        max-width: 222px;
+      }
     }
   }
 }
@@ -531,6 +722,26 @@ input[type="text"]::placeholder {
   .top__btn {
     margin-bottom: 200px;
   }
+  .collection__img {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    &-first {
+      display: block;
+    }
+    &-third {
+      display: block;
+    }
+  }
+  .footer {
+    padding: 88px 15px 110px;
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+  }
 }
 @media (min-width: 1024px) {
   .container {
@@ -573,7 +784,53 @@ input[type="text"]::placeholder {
       height: auto;
     }
   }
-  .complete__content {
+  .collection {
+    padding: 90px 10px;
+    &__text {
+      margin-bottom: 57px;
+    }
+    &__img {
+      gap: 90px;
+    }
+  }
+  .complete {
+    padding: 0 10px 100px;
+    &__content {
+      display: flex;
+      gap: 50px;
+    }
+    &__box {
+      max-width: 346px;
+    }
+    &__title {
+      width: 346px;
+      margin-bottom: 66px;
+    }
+    &__text {
+      margin-bottom: 42px;
+    }
+    &__btn {
+      margin-bottom: 0;
+    }
+  }
+  .contacts__content {
     display: flex;
+    flex-direction: row-reverse;
+    gap: 45px;
+  }
+  .contacts__form {
+    text-align: left;
+    padding: 0;
+  }
+  .contacts__title {
+    text-align: left;
+    margin-bottom: 86px;
+  }
+  .contacts__btn {
+    text-align: left;
+    margin-top: 60px;
+  }
+  .footer__list {
+    gap: 110px;
   }
 }
