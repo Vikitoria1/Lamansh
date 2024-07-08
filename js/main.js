@@ -9,8 +9,8 @@ $(document).ready(function () {
   $(".complete__img").slick({
     arrows: false,
     infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
     variableWidth: true,
     responsive: [
       {
@@ -18,15 +18,15 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: false
+          infinite: false,
         },
       },
       {
-        breakpoint: 340,
+        breakpoint: 414,
         settings: {
-          slidesToShow: 1.2,
+          slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: false
+          infinite: false,
         },
       },
     ],

@@ -41,6 +41,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
+
 body {
   min-width: 320px;
   font-family: $main-fam;
@@ -124,12 +128,26 @@ body {
     margin-bottom: 35px;
   }
   &__item {
-    margin-bottom: 13px;
+    margin-bottom: 60px;
   }
   &__link {
     font-weight: 400;
     font-size: 50px;
     color: $color-white;
+    position: relative;
+    &::before {
+      content: "";
+      bottom: -5px;
+      left: 0;
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background-color: $color-white;
+      transition: 0.3s;
+    }
+    &:hover::before {
+      width: 100%;
+    }
   }
 }
 
@@ -140,7 +158,7 @@ body {
   &-input {
     font-weight: 400;
     font-size: 25px;
-    color: $color-black;
+    color: $color-light-gray;
     background: transparent;
     border: none;
     outline: none;
@@ -195,6 +213,10 @@ input[type="text"]::placeholder {
     font-size: 19px;
     color: $color-dark-gray;
     margin-bottom: 32px;
+    transition: $transition;
+    &:hover {
+      background: $color-brown-gray;
+    }
   }
 }
 
@@ -225,8 +247,13 @@ input[type="text"]::placeholder {
     align-items: center;
     gap: 63px;
   }
-  &__item img {
-    display: block;
+  &__item {
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__link img {
     max-width: 100%;
     height: auto;
   }
@@ -306,6 +333,9 @@ input[type="text"]::placeholder {
     line-height: 105%;
     text-align: center;
     color: $color-black;
+    &:hover {
+      color: $color-brown-gray;
+    }
   }
 
   &__name-btn {
@@ -315,6 +345,15 @@ input[type="text"]::placeholder {
     line-height: 131%;
     text-align: center;
     color: $color-black;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+    & img {
+      width: 20px;
+      height: 20px;
+      margin-left: 17px;
+    }
   }
   &__picture {
     display: flex;
@@ -324,12 +363,12 @@ input[type="text"]::placeholder {
     gap: 20px;
     &-box {
       width: 300px;
-      height: auto;
+      height: 260px;
     }
     &-img {
-      display: block;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -369,10 +408,9 @@ input[type="text"]::placeholder {
     display: none;
   }
   &__img-sec {
-    width: 300px;
+    max-width: 300px;
     height: 100%;
     & img {
-      display: block;
       width: 100%;
     }
   }
@@ -385,6 +423,10 @@ input[type="text"]::placeholder {
     background: $color-brown-gray;
     padding: 11px 22px;
     margin-top: 34px;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -414,6 +456,10 @@ input[type="text"]::placeholder {
     background: $color-brown-gray;
     padding: 10px 47px;
     margin-bottom: 62px;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__img {
     min-width: 0;
@@ -422,7 +468,6 @@ input[type="text"]::placeholder {
       margin-right: 25px;
     }
     &-link img {
-      display: block;
       max-width: 100%;
       height: auto;
     }
@@ -467,10 +512,14 @@ input[type="text"]::placeholder {
     }
   }
   &__input {
+    font-family: $sec-fam;
+    font-weight: 400;
+    font-size: 17px;
+    color: $color-light-gray;
     padding: 15px 0 8px;
     border: none;
+    outline: none;
     border-bottom: 1px solid $color-light-gray;
-    display: block;
     width: 100%;
     margin-bottom: 24px;
   }
@@ -483,9 +532,12 @@ input[type="text"]::placeholder {
     cursor: pointer;
     padding: 13px 110px;
     margin-top: 31px;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__img {
-    display: block;
     width: 100%;
   }
 }
@@ -509,6 +561,10 @@ input[type="text"]::placeholder {
     text-transform: capitalize;
     text-align: center;
     color: $color-dark-gray-variant;
+    transition: $transition;
+    &:hover {
+      color: $color-brown-gray;
+    }
   }
   &__img {
     display: flex;
@@ -516,7 +572,6 @@ input[type="text"]::placeholder {
     align-items: center;
     margin-top: 64px;
     & img {
-      display: block;
       width: 100%;
     }
   }
@@ -581,6 +636,10 @@ input[type="text"]::placeholder {
     &-item {
       width: 33px;
       height: 33px;
+      transition: $transition;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
     &-link {
       display: flex;
@@ -620,9 +679,8 @@ input[type="text"]::placeholder {
       font-weight: 400;
       font-size: 13px;
       line-height: 162%;
-    }
-    &-link img {
-      display: block;
+      color: $color-medium-gray-variant;
+      outline: none;
     }
   }
 }
@@ -641,6 +699,8 @@ input[type="text"]::placeholder {
       text-align: left;
     }
     &-btn {
+      display: flex;
+      align-items: center;
       text-align: left;
     }
   }
@@ -648,6 +708,13 @@ input[type="text"]::placeholder {
     flex-direction: column;
     &-box {
       width: 358px;
+      height: 330px;
+    }
+  }
+  .collection__img-sec {
+    max-width: 358px;
+    & img {
+      width: 100%;
     }
   }
   .follow {
@@ -727,7 +794,8 @@ input[type="text"]::placeholder {
     flex-direction: row;
     gap: 20px;
     &-first {
-      display: block;
+      display: flex;
+      align-items: flex-end;
     }
     &-third {
       display: block;
@@ -790,7 +858,13 @@ input[type="text"]::placeholder {
       margin-bottom: 57px;
     }
     &__img {
-      gap: 90px;
+      gap: 70px;
+      &-sec {
+        max-width: 425px;
+        & img {
+          width: 100%;
+        }
+      }
     }
   }
   .complete {
