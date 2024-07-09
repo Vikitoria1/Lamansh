@@ -346,6 +346,9 @@ input[type=text]::placeholder {
   color: #9b8c7c;
 }
 .search__name-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Hind Vadodara", sans-serif;
   font-weight: 400;
   font-size: 16px;
